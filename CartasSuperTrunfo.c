@@ -14,7 +14,8 @@ int main() {
   float area1;
   float pib1;
   int pontosturisticos1;
-
+  float densidade1;
+  float pibperCapina1;
 
   // Carta 2
   char estado2; 
@@ -24,10 +25,14 @@ int main() {
   float area2;
   float pib2;
   int pontosturisticos2; 
+  float densidade2;
+  float pibperCapina2;
 
   // Área para entrada de dados
 
   // Carta 1
+
+  printf("=== Carta 1 ===\n");
 
   printf("Digite o estado da carta1: ");
   scanf("%c", &estado1);
@@ -44,13 +49,15 @@ int main() {
   printf("Digite a area da cidade: ");
   scanf("%f", &area1);
 
-  printf("Digite o PIB da cidade: ");
+  printf("Digite o PIB da cidade : ");
   scanf("%f", &pib1);
  
   printf("Digite a quantidade de pontos turisticos: ");
   scanf("%d", &pontosturisticos1);
 
   // Carta 2
+
+  printf("=== Carta 2 ===\n");
 
   printf("Digite o estado da carta2: ");
   scanf(" %c", &estado2);
@@ -64,7 +71,7 @@ int main() {
   printf("Digite a populacao da cidade: ");
   scanf("%d", &populacao2);
 
-  printf("Digite a area da ciadade: ");
+  printf("Digite a area da cidade: ");
   scanf("%f", &area2);
 
   printf("Digite o PIB da cidade: ");
@@ -72,6 +79,14 @@ int main() {
 
   printf("Digite a quantidade de pontos turistiscos: ");
   scanf("%d", &pontosturisticos2);
+
+  // Calculo carta 1
+  densidade1 = populacao1 / area1;
+  pibperCapina1 = pib1 / populacao1;
+
+  // Calculo carta 2
+  densidade2 = populacao2 / area2;
+  pibperCapina2 = pib2 / populacao2;
 
   // Área para exibição dos dados da cidade 
 
@@ -84,6 +99,8 @@ int main() {
   printf("Area: %.2f km²\n", area1);
   printf("PIB: %.2f\n", pib1);
   printf("Pontos turisticos: %d\n", pontosturisticos1);
+  printf("Densidade populacional: %.2f hab/km²\n", densidade1);
+  printf("PIB per capina: %.2f\n", pibperCapina1);
 
   // Carta 2
 
@@ -94,6 +111,8 @@ int main() {
   printf("Area: %.2f km²\n", area2);
   printf("PIB: %.2f\n", pib2);
   printf("Pontos turisticos: %d\n", pontosturisticos2);
+  printf("Densidade populacional: %.2f hab/km²\n", densidade2);
+  printf("PIB per capina: %.2f\n", pibperCapina2);
 
 return 0;
 } 
